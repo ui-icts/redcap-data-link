@@ -1,0 +1,58 @@
+{
+  "name": "Data Link",
+  "description": "Allows data from other REDCap projects to be displayed as read-only fields on a single project's data entry forms.",
+  "documentation": "README.md",
+
+  "namespace": "UIOWA\\DataLink",
+  "framework-version": 8,
+
+  "authors": [
+    {
+      "name": "Izzy Neuhaus",
+      "email": "isabelle-neuhaus@uiowa.edu",
+      "institution": "University of Iowa Institute for Clinical and Translational Science"
+    }
+  ],
+
+  "links": {
+    "project": [
+      {
+        "name": "Data Link Config",
+        "icon": "gear",
+        "url": "index.php"
+      }
+    ]
+  },
+
+  "permissions": [
+    "redcap_data_entry_form"
+  ],
+
+  "no-auth-pages": [
+    "post"
+  ],
+
+  "project-settings": [
+    {
+      "key": "linked-projects",
+      "name": "Linked Project Config",
+      "required": true,
+      "type": "sub_settings",
+      "repeatable":true,
+      "sub_settings":[
+        {
+          "key": "linked-pid",
+          "name": "Project ID to retrieve data from",
+          "required": true,
+          "type": "project-id"
+        },
+        {
+          "key": "linked-field-color",
+          "name": "Background color for linked fields",
+          "type": "color-picker",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

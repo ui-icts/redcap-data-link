@@ -1,0 +1,15 @@
+.incomplete {
+   background-color: #fcb1b1;
+}
+
+.tinted {
+   background-color: #f0f696;
+}
+
+.complete {
+   background-color: #96f7d2;
+}
+
+.mixed {
+   background-color: #95bcfc;
+}
